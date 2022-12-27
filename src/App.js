@@ -7,30 +7,31 @@ function App() {
 
   const times = [
     {
-      nome: 'Warriors',
+      nome: 'Brooklyn Nets',
+      corPrimaria: '#000000',
+      corSecundaria: '#FFFFFF'
+    },
+    {
+      nome: 'Golden State Warriors',
       corPrimaria: '#1D428A',
-      corSecundaria: '#ffc72c'
+      corSecundaria: '#ffe7b5'
     },
     {
-      nome: 'Lakers',
-      corPrimaria: '#552583',
-      corSecundaria: '#FDB927'
+      nome: 'Boston Celtics',
+      corPrimaria: '#007A33',
+      corSecundaria: '#FFFFFF'
     },
     {
-      nome: 'Clippers',
-      corPrimaria: '#1D428A',
-      corSecundaria: '#C8102E'
+      nome: 'Denver Nuggets',
+      corPrimaria: '#0E2240',
+      corSecundaria: '#ffe7b5'
     },
     {
-      nome: 'Suns',
-      corPrimaria: '#1D1160',
-      corSecundaria: '#E56020'
-    },
-    {
-      nome: 'Kings',
-      corPrimaria: '#5A2D81',
-      corSecundaria: '#63727A'
-    } 
+      nome: 'Milwaukee Bucks',
+      corPrimaria: '#00471B',
+      corSecundaria: '#EEE1C6'
+    }
+    
   ]
 
   const[jogadores, setJogadores] = useState([])
@@ -44,7 +45,13 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario times={times.map(time => time.nome)} aoJogadorCadastrado={jogador => aoNovoJogador(jogador)}/>
-      {times.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>)}
+      {times.map(time => <Time 
+        key={time.nome} 
+        nome={time.nome} 
+        corPrimaria={time.corPrimaria} 
+        corSecundaria={time.corSecundaria}
+        jogadores={jogadores.filter(jogador => jogador.time === time.nome)}
+      />)}
     </div>
   );
 }

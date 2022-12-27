@@ -1,14 +1,15 @@
 import './Jogador.css'
 
-const Jogador = () => {
+const Jogador = ({nome, imagem, posicao, numero, corDeFundo}) => {
     return (
         <div className='jogador'>
-            <div className='cabecalho'>
-                <img src='https://github.com/FelipeEmanuel.png' alt='Teste'/>
+            <div className='cabecalho' style={{backgroundColor: corDeFundo}}>
+                <img src={imagem} alt={nome}/>
             </div>
             <div className='rodape'>
-                <h4>Stephen Curry</h4>
-                <h5>PG - Armador</h5>
+                <h4>{nome} #{numero}</h4>
+                <h5>{posicao}</h5>
+                
             </div>
         </div>
     )

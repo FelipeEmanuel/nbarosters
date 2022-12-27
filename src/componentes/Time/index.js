@@ -8,11 +8,13 @@ const Time = (props) => {
 
     return (
         
-        <section className='time' style={css}>
+        (props.jogadores.length > 0) ? <section className='time' style={css}>
             <h3 style={inside}>{props.nome}</h3>
-            <Jogador />
-            <Jogador />
+            <div className='jogadores'>
+                {props.jogadores.map( jogador => <Jogador corDeFundo={props.corPrimaria} key={jogador.nome} nome={jogador.nome} posicao={jogador.posicao} imagem={jogador.imagem} numero={jogador.numero}/> )}
+            </div>
         </section>
+        : ''
     )
 }
 

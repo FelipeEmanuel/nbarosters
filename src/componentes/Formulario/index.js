@@ -18,13 +18,18 @@ const Formulario = (props) => {
     const[imagem, setImagem] = useState('')
     const[posicao, setPosicao] = useState('')
     const[time, setTime] = useState('')
+    const[numero, setNumero] = useState('')
 
     const aoSalvar = (e) => {
         e.preventDefault()
         props.aoJogadorCadastrado({
-            nome, imagem, time, posicao
+            nome, imagem, time, posicao, numero
         })
-        //console.log('Form foi submetido', nome, imagem, time, posicao)
+        setNome('')
+        setPosicao('')
+        setNumero('')
+        setImagem('')
+        setTime('')
     }
     
     return (
@@ -44,6 +49,13 @@ const Formulario = (props) => {
                     itens={posicoes} 
                     valor={posicao}
                     aoAlterado={valor => setPosicao(valor)}
+                />
+                <CampoTexto 
+                    required={true} 
+                    label="Número" 
+                    placeholder="Digite seu número" 
+                    valor={numero}
+                    aoAlterado={valor => setNumero(valor)}
                 />
                 <CampoTexto 
                     label="Imagem" 
