@@ -1,16 +1,20 @@
-## NBARosters App!
 
-Versão do site organo do Curso de React Front-End da Alura!
+<h1 align="center"> NBA Rosters </h1> 
 
-## Uso
+<p align="center">
+<img src="http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=GREEN&style=for-the-badge"/>
+</p>
 
-Site front-end que permite criar cards de jogadores e colocá-los em times da NBA!
-O exemplo possui 5 times, mas é possível colocar mais!
-Também possui um pequeno número de jogadores já pré-cadastrados!
+# Tópicos 
 
-## Motivação
+* [Descrição do Projeto](#descrição-do-projeto)
+* [Funcionalidades](#funcionalidades)
+* [Ferramentas utilizadas](#ferramentas-utilizadas)
+* [Acesso ao Projeto](#acesso-ao-projeto)
+* [Demo](#demo)
 
-Como parte dos meus estudos de front-end enquanto assistia o curso da alura, tive a ideia de fazer o site organo baseado em jogadores e times da NBA!
+## Descrição do Projeto
+Versão do site organo do Curso de React Front-End da Alura! Permite criar cards de jogadores e colocá-los em times da NBA! O exemplo possui 5 times, mas é possível colocar mais! Também possui um pequeno número de jogadores já pré-cadastrados!
 
 ## Funcionalidades
 
@@ -20,6 +24,16 @@ Como parte dos meus estudos de front-end enquanto assistia o curso da alura, tiv
 * Deletar jogador de um determinado time
 * Mudar a cor de um time
 * Adicionar um novo time
+
+## Ferramentas utilizadas
+
+* React
+
+## Acesso ao Projeto
+
+* Baixar o projeto aqui no github e abrir a pasta no vscode;
+* No diretório principal (nbarosters) instalar as dependências com npm install;
+* No diretório principal rodar "npm start" para subir o projeto;
 
 ## Demo
 
